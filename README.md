@@ -42,12 +42,6 @@ This project implements a **Decoupled Architecture**, separating the heavy data 
 3.  **Prediction:** When a user selects a *Kelurahan*, the backend runs the ML model against historical patterns for that specific topography.
 4.  **Presentation:** The API sends JSON data to the Frontend, where it is rendered into easy-to-read cards and graphs.
 
-## 📸 Screenshots
-
-*(Place your screenshots here. Example: A screenshot of the dashboard showing a rainy prediction for "Kecamatan Bawang")*
-
-![Dashboard Preview](https://via.placeholder.com/800x400?text=Dashboard+Screenshot+Placeholder)
-
 ## 🛠️ Installation & Setup
 
 If you want to run this project locally:
