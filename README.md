@@ -1,4 +1,4 @@
-# 🌦️ BatangCast: Hyper-Local Weather Foresight
+# 🌦️ Beather: Weather Prediction Project for Batang, Central Java, Indonesia
 
 ![Project Status](https://img.shields.io/badge/Status-Active-success)
 ![Python](https://img.shields.io/badge/Python-3.9%2B-blue)
