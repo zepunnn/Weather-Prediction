@@ -44,6 +44,88 @@ This project uses a **decoupled architecture** to ensure scalability, clean data
 
 ---
 
+## 📁 Project Folder Structure
+beather/
+│
+├── app/ # Backend (FastAPI)
+│ ├── main.py # API entry point
+│ ├── database.py # MySQL connection
+│ ├── routers/
+│ │ └── prediction.py # Weather prediction API routes
+│ ├── services/
+│ │ └── prediction_service.py
+│ ├── models/
+│ │ ├── model_loader.py # Load/train ML model
+│ │ └── ml_model.pkl # Saved ML model
+│ ├── schemas/
+│ │ └── prediction_schema.py
+│ └── utils/
+│ ├── import_data.py # Fetch BMKG Open Data
+│ └── preprocessing.py # Data cleaning helpers
+│
+├── ml_model/ # Offline ML workspace
+│ ├── train_model.ipynb # Notebook for experimentation
+│ ├── training_script.py # Offline training
+│ ├── export_dataset.py # Export DB → CSV
+│ └── dataset/
+│ └── weather_data.csv # Raw dataset
+│
+├── database/
+│ ├── schema.sql # MySQL table definitions
+│ └── seed.sql # Optional sample data
+│
+├── frontend/ # TypeScript Web App
+│ ├── src/
+│ │ ├── index.ts # Main TS entry
+│ │ ├── components/
+│ │ ├── pages/
+│ │ └── services/
+│ └── package.json
+│
+└── README.md
+A clean, scalable architecture separating backend, machine learning assets, and the TypeScript frontend.
+
+
+---
+
+## 🗺️ System Architecture Diagram
+
+A high-level overview of Beather’s architecture:
+
+                    ┌───────────────────────────┐
+                    │      BMKG Open Data        │
+                    └──────────────┬─────────────┘
+                                   │
+                    (1) Fetch & Ingest via import_data.py
+                                   │
+            ┌──────────────────────▼──────────────────────┐
+            │                  MySQL DB                   │
+            │ (weather_log: temp, humidity, wind, rain)   │
+            └──────────────┬──────────────────────────────┘
+                           │
+     (2) Export / (3) Train Model (Automatic or Offline)
+                           │
+            ┌──────────────▼──────────────────────┐
+            │          ML Model (pkl)             │
+            │ RandomForestClassifier / Regressor  │
+            └──────────────┬──────────────────────┘
+                           │
+                 (4) FastAPI Backend
+                           │
+            ┌──────────────▼──────────────────────┐
+            │         Prediction API               │
+            │   /predict?adm4_code=xxxx            │
+            └──────────────┬──────────────────────┘
+                           │
+                 (5) JSON Response
+                           │
+          ┌────────────────▼─────────────────┐
+          │        TypeScript Frontend        │
+          │ Chart.js Graphs, UI Visuals       │
+          └───────────────────────────────────┘
+
+---
+
 ## 🚀 How It Works
 
 1. **Data Ingestion:** BMKG Open Data is fetched and stored into the MySQL database via automated scripts.
@@ -78,5 +160,5 @@ Distributed under the MIT License. See `LICENSE` for details.
 ---
 
 <p align="center">
-  Made with ❤️ for <b>Batang, Indonesia</b>
+  Made with ❤️ for <b>Batang, Central Java, Indonesia</b>
 </p>
