@@ -44,50 +44,28 @@ This project uses a **decoupled architecture** to ensure scalability, clean data
 
 ---
 
-## 📁 Project Structure
+## ⚙️ Functional Zones
 
-Below is the full folder architecture of the Beather project.
+### 🧠 Intelligence Zone
+- Training ML models  
+- Optimizing regression/classification  
+- Maintaining prediction accuracy  
 
+### 🔌 Data Zone
+- Importing BMKG datasets  
+- Cleaning & preprocessing  
+- Feeding data into the model  
+- Database seeding/export  
 
-📦 beather
-│
-├─ 📁 app (FastAPI Backend)
-│   ├─ 📄 main.py
-│   ├─ 📄 database.py
-│   ├─ 📁 routers
-│   │    └─ 📄 prediction.py
-│   ├─ 📁 services
-│   │    └─ 📄 prediction_service.py
-│   ├─ 📁 models
-│   │    ├─ 📄 model_loader.py
-│   │    └─ 📦 ml_model.pkl
-│   ├─ 📁 schemas
-│   │    └─ 📄 prediction_schema.py
-│   └─ 📁 utils
-│        ├─ 📄 import_data.py
-│        └─ 📄 preprocessing.py
-│
-├─ 📁 ml_model (ML Workspace)
-│   ├─ 📄 train_model.ipynb
-│   ├─ 📄 training_script.py
-│   ├─ 📄 export_dataset.py
-│   └─ 📁 dataset
-│        └─ 📄 weather_data.csv
-│
-├─ 📁 database
-│   ├─ 📄 schema.sql
-│   └─ 📄 seed.sql
-│
-├─ 📁 frontend (TypeScript Web App)
-│   ├─ 📁 src
-│   │    ├─ 📄 index.ts
-│   │    ├─ 📁 components
-│   │    ├─ 📁 pages
-│   │    └─ 📁 services
-│   └─ 📄 package.json
-│
-└─ 📄 README.md
+### ⚡ API Zone
+- Provides REST endpoints  
+- Interfaces between ML model and UI  
+- Ensures data security & validation  
 
+### 🎨 Experience Zone
+- Displays graphs  
+- Interactive weather UI  
+- Mobile-friendly dashboard  
 
 ---
 
