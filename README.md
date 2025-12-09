@@ -44,10 +44,11 @@ This project uses a **decoupled architecture** to ensure scalability, clean data
 
 ---
 
-## 📁 Project Folder Structure
+## 📁 Project Structure
 
-A clean, scalable architecture separating backend, machine learning assets, and the TypeScript frontend.
-'''
+Below is the full folder architecture of the Beather project.
+
+
 📦 beather
 │
 ├─ 📁 app (FastAPI Backend)
@@ -85,7 +86,8 @@ A clean, scalable architecture separating backend, machine learning assets, and 
 │   │    └─ 📁 services
 │   └─ 📄 package.json
 │
-└─ 📄 README.md '''
+└─ 📄 README.md
+
 
 ---
 
