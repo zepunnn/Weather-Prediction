@@ -25,6 +25,7 @@ This system transforms complex meteorological datasets from **BMKG** into meanin
 * **🤖 AI-Powered Predictions:** Machine Learning models identify rainfall likelihood and weather patterns using historical BMKG data.
 * **📊 Interactive Visualization:** Dynamic, user-friendly charts (Chart.js) for understanding weather trends.
 * **⚡ Fast & Modern API:** Backend built with **FastAPI**, offering high performance and async capability.
+* **🎨 TypeScript Frontend:** A modern and responsive interface built with TypeScript for safer, scalable, and maintainable code.
 * **🔄 Automated ETL Pipeline:** Continuous synchronization with BMKG Open Data to keep the system up to date.
 
 ---
@@ -38,7 +39,7 @@ This project uses a **decoupled architecture** to ensure scalability, clean data
 | **Backend & API** | ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white) **FastAPI** | Handles requests, serves ML predictions, manages preprocessing. |
 | **Machine Learning** | **Pandas & Scikit-Learn** | Data pipeline, feature extraction, model training & evaluation. |
 | **Database** | ![MySQL](https://img.shields.io/badge/MySQL-005C84?style=flat&logo=mysql&logoColor=white) **MySQL** | Stores historical BMKG weather data and prediction logs. |
-| **Frontend** | ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black) | Provides UI for choosing locations and viewing weather graphs. |
+| **Frontend** | ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white) **TypeScript** | Modern, typed UI for displaying weather predictions and graphs. |
 | **Visualization** | **Chart.js** | Renders interactive charts for temperature, rainfall, and trends. |
 
 ---
@@ -48,7 +49,7 @@ This project uses a **decoupled architecture** to ensure scalability, clean data
 1. **Data Ingestion:** BMKG Open Data is fetched and stored into the MySQL database via automated scripts.
 2. **Data Processing:** Backend scripts preprocess and clean the dataset for ML training.
 3. **Prediction Serving:** When a user selects a *Kelurahan*, FastAPI loads the trained model and performs inference.
-4. **Result Presentation:** The API returns weather predictions, visualized instantly on the frontend.
+4. **Result Presentation:** The API returns weather predictions, visualized instantly on the TypeScript frontend.
 
 ---
 
